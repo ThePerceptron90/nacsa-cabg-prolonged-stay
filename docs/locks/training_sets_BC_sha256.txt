@@ -1,0 +1,14 @@
+Step 14 models (training sets B and C), locked 8 Oct 2026. sha256 of each file in $NACSA_DIR/work/training_periods/.
+set          stage model                       file                                                           sha256
+  B          preop    M2          setB_preop_M2.pkl 2575e4fc6a90f969555e35523be8faf967af77d472fbec5d7f8115a71010284a
+  B          preop    M3          setB_preop_M3.pkl 3964f539032efa7e2d8b73acc1138ec36f85f80b4f7f0be06dcd894b8149ff73
+  B end_of_surgery    M2 setB_end_of_surgery_M2.pkl 5af176ab9903d194f80e9061c88e7677c443d5ce3eda86aa1350fd48e4c496c7
+  B end_of_surgery    M3 setB_end_of_surgery_M3.pkl e529ee9c6cff946f4dc9e3f85f92c38dfd754194c63fda7693ed06e2e90a51ca
+  B   early_postop    M2   setB_early_postop_M2.pkl 0b200f7c00b7aee3a7700764eb79003eaa844d948ca4eb5b0071b4f9b4d1c723
+  B   early_postop    M3   setB_early_postop_M3.pkl bd956bacc35f4f18229d6b816ac72b0c4a32767fa6af57651418fa343c7cc87f
+  C          preop    M2          setC_preop_M2.pkl e6281f08d58f0b7bd193eb7ba7c39953cab52973b88633decae5eb56d1a31765
+  C          preop    M3          setC_preop_M3.pkl 9b95e56877e11d15eb7a53f82f29c07eaaf9f8ee7e390a3c352f3e1c3be6d1f2
+  C end_of_surgery    M2 setC_end_of_surgery_M2.pkl 22a093d19a60ae7f9625709ef5217f50ca916b63038bbae7a76ef5496399869e
+  C end_of_surgery    M3 setC_end_of_surgery_M3.pkl 72aecd89fead6a38447fadc11e1726444ba8e700ce2c3d07e57cb1dd97bce76e
+  C   early_postop    M2   setC_early_postop_M2.pkl 236b67764677d43c2d48ccfdbea48d84d71d30ffed73e794282fde9da7310192
+  C   early_postop    M3   setC_early_postop_M3.pkl 49736fb5db0ef5ca88e76ac77900fde9ef555a93ad1ad72619c114ab4d0d8344

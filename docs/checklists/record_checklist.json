@@ -1,0 +1,218 @@
+[
+[
+"Section",
+"Item",
+"Recommendation (abridged; STROBE item, or RECORD item in italics in the source)",
+"Where reported"
+],
+[
+"Title and abstract",
+"1 (STROBE)",
+"Study design in title or abstract; informative summary",
+"Title; Abstract"
+],
+[
+"Title and abstract",
+"RECORD 1.1",
+"Type of data and names of databases in title or abstract",
+"Abstract (UK National Adult Cardiac Surgery Audit, a national registry)"
+],
+[
+"Title and abstract",
+"RECORD 1.2",
+"Geographic region and time frame in title or abstract",
+"Abstract (United Kingdom; 2012-2016 and 2017-2019)"
+],
+[
+"Title and abstract",
+"RECORD 1.3",
+"Linkage between databases stated in title or abstract",
+"Not applicable: no linkage"
+],
+[
+"Introduction",
+"2",
+"Scientific background and rationale",
+"Introduction"
+],
+[
+"Introduction",
+"3",
+"Specific objectives",
+"Introduction, last paragraph"
+],
+[
+"Methods",
+"4",
+"Key elements of study design",
+"Methods: Study design"
+],
+[
+"Methods",
+"5",
+"Setting, locations, dates of recruitment and follow-up",
+"Methods: Study design; Outcome"
+],
+[
+"Methods",
+"6",
+"Eligibility criteria, sources and methods of selection",
+"Methods: Study design; Figure 1"
+],
+[
+"Methods",
+"RECORD 6.1",
+"Methods of population selection (codes or algorithms) in detail",
+"Methods: Study design (isolated CABG records in the audit extract; exclusions); Supplementary Methods S1"
+],
+[
+"Methods",
+"RECORD 6.2",
+"Validation studies of the codes or algorithms used to select the population",
+"Methods: Study design (audit data flow and validation described in our previous analyses of this registry, cited in the Methods)"
+],
+[
+"Methods",
+"RECORD 6.3",
+"Flow diagram of data linkage",
+"Not applicable: no linkage; patient flow in Figure 1"
+],
+[
+"Methods",
+"7",
+"Define outcomes, predictors and effect modifiers",
+"Methods: Outcome; Prediction moments and predictors; Supplementary Table ST1"
+],
+[
+"Methods",
+"RECORD 7.1",
+"Complete list of codes and algorithms used to classify outcomes and predictors",
+"Supplementary Table ST1 (audit field, coding and levels of every variable); Supplementary Tables ST3-ST4"
+],
+[
+"Methods",
+"8",
+"Data sources and methods of measurement",
+"Methods: Study design; Supplementary Methods S1"
+],
+[
+"Methods",
+"9",
+"Efforts to address sources of bias",
+"Methods (locked models, temporal evaluation, pre-specified rules); Strengths and limitations"
+],
+[
+"Methods",
+"10",
+"How the study size was arrived at",
+"Methods: Sample size; Supplementary Table ST7"
+],
+[
+"Methods",
+"11",
+"Handling of quantitative variables",
+"Methods: Models (splines, no dichotomisation); Supplementary Methods S4"
+],
+[
+"Methods",
+"12",
+"Statistical methods, subgroups, missing data, sensitivity analyses",
+"Methods: Missing data to Additional analyses; Supplementary Methods S3-S13"
+],
+[
+"Methods",
+"RECORD 12.1",
+"Extent of investigators' access to the database population",
+"Methods: Study design (pseudonymised extract supplied by NICOR); Supplementary Methods S1"
+],
+[
+"Methods",
+"RECORD 12.2",
+"Data cleaning methods",
+"Methods: Study design (data checks); Supplementary Tables ST3-ST4"
+],
+[
+"Methods",
+"RECORD 12.3",
+"Person-level or other linkage across databases",
+"Not applicable: no linkage"
+],
+[
+"Results",
+"13",
+"Numbers at each stage; reasons for non-participation; flow diagram",
+"Results: Patients; Figure 1"
+],
+[
+"Results",
+"RECORD 13.1",
+"Selection of included persons, including filtering on data quality and availability",
+"Figure 1; Methods: Study design; Supplementary Table ST20"
+],
+[
+"Results",
+"14",
+"Characteristics of participants; missing data per variable",
+"Table 1; Supplementary Tables ST5-ST6"
+],
+[
+"Results",
+"15",
+"Numbers of outcome events",
+"Results: Patients; Figure 1"
+],
+[
+"Results",
+"16",
+"Main results with precision",
+"Results; Tables 2-3"
+],
+[
+"Results",
+"17",
+"Other analyses (subgroups, sensitivity analyses)",
+"Results: Additional analyses; Supplementary Tables ST14-ST17"
+],
+[
+"Discussion",
+"18",
+"Key results",
+"Discussion, first paragraph"
+],
+[
+"Discussion",
+"19",
+"Limitations, sources of bias and imprecision",
+"Strengths and limitations"
+],
+[
+"Discussion",
+"RECORD 19.1",
+"Implications of using data not collected for the research question (misclassification, unmeasured confounding, missing data, changing eligibility)",
+"Strengths and limitations (unrecorded social and organisational factors, comorbidities recorded as absent when blank, deaths excluded, data ending March 2019); Discussion (drift)"
+],
+[
+"Discussion",
+"20",
+"Cautious overall interpretation",
+"Discussion; Conclusions"
+],
+[
+"Discussion",
+"21",
+"Generalisability",
+"Strengths and limitations (temporal evaluation within one country)"
+],
+[
+"Other information",
+"22",
+"Funding and role of funders",
+"Funding statement"
+],
+[
+"Other information",
+"RECORD 22.1",
+"How to access protocol, raw data or programming code",
+"Methods: Study design (protocol); Data availability statement (data via NICOR; code on GitHub and Zenodo)"
+]
+]

@@ -1,0 +1,464 @@
+[
+[
+"Part",
+"Section",
+"Item",
+"Requirement (abridged)",
+"Where reported"
+],
+[
+"A. TRIPOD+AI",
+"Title and abstract",
+"1",
+"Identify the study as developing or evaluating a prediction model, the target population and the outcome",
+"Title"
+],
+[
+"A. TRIPOD+AI",
+"Title and abstract",
+"2",
+"Abstract (TRIPOD+AI for Abstracts)",
+"Abstract; checklist part B below"
+],
+[
+"A. TRIPOD+AI",
+"Introduction",
+"3a",
+"Healthcare context, rationale and existing models",
+"Introduction, paragraphs 1-3"
+],
+[
+"A. TRIPOD+AI",
+"Introduction",
+"3b",
+"Target population, intended purpose and users in the care pathway",
+"Introduction, paragraphs 1 and 4; Discussion (implications for practice); Supplementary Methods S16"
+],
+[
+"A. TRIPOD+AI",
+"Introduction",
+"3c",
+"Known health inequalities between sociodemographic groups",
+"Discussion (inequity paragraph); Strengths and limitations (ethnicity and deprivation not recorded)"
+],
+[
+"A. TRIPOD+AI",
+"Introduction",
+"4",
+"Objectives, including development and/or evaluation",
+"Introduction, last paragraph"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"5a",
+"Data sources, rationale and representativeness",
+"Methods: Study design, data source and participants; Supplementary Methods S1"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"5b",
+"Dates of data collection, start and end of accrual",
+"Methods: Study design (1996 to March 2019; development 2012-2016, evaluation 2017-2019)"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"6a",
+"Setting, number and location of centres",
+"Methods: Study design (NHS cardiac surgical units in the United Kingdom; hospital identifiers not available, Strengths and limitations)"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"6b",
+"Eligibility criteria",
+"Methods: Study design and Outcome; Figure 1"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"6c",
+"Treatments received and how they were handled",
+"Methods: Prediction moments and predictors (operative predictors); Supplementary Table ST1"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"7",
+"Data pre-processing and quality checks",
+"Methods: Study design (data checks); Supplementary Tables ST3-ST5"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"8a",
+"Outcome definition, time horizon, how and when assessed, rationale",
+"Methods: Outcome"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"8b",
+"Qualifications and demographics of outcome assessors, if subjective",
+"Not applicable: objective, routinely recorded outcome (Supplementary Methods S16)"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"8c",
+"Blinding of outcome assessment",
+"Supplementary Methods S16"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"9a",
+"Choice of initial predictors and any pre-selection",
+"Methods: Prediction moments and predictors"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"9b",
+"Definition of every predictor, how and when measured",
+"Supplementary Table ST1; Supplementary Methods S2"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"9c",
+"Subjective predictor assessments",
+"Supplementary Methods S16"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"10",
+"Sample size, for development and evaluation",
+"Methods: Sample size; Supplementary Table ST7"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"11",
+"Handling of missing data",
+"Methods: Missing data; Supplementary Methods S3; Supplementary Tables ST5-ST5b"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"12a",
+"How data were used and partitioned",
+"Methods: Study design and Development and internal validation"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"12b",
+"Predictor handling (functional form, rescaling, transformation)",
+"Methods: Models; Supplementary Methods S4"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"12c",
+"Model type, rationale, building steps, tuning, internal validation",
+"Methods: Models; Development and internal validation; Supplementary Methods S4-S5; Supplementary Table ST8"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"12d",
+"Handling of heterogeneity across clusters (e.g. centres)",
+"Not possible: no hospital identifier (Strengths and limitations); heterogeneity over time by year (Methods: Temporal evaluation)"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"12e",
+"Performance measures, plots and model comparisons",
+"Methods: Choosing the headline model; Temporal evaluation and performance measures; Supplementary Methods S6-S7"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"12f",
+"Model updating",
+"Methods: Temporal evaluation (updating scenario); Supplementary Methods S8"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"12g",
+"How predictions were calculated for evaluation",
+"Methods: Development and internal validation (locked models applied once)"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"13",
+"Class imbalance methods",
+"Supplementary Methods S16 (none used)"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"14",
+"Fairness approaches and rationale",
+"Methods: Additional analyses; Supplementary Methods S13"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"15",
+"Model output and any classification thresholds",
+"Methods: Choosing the headline model and Temporal evaluation (threshold range 10-30%, agreed in advance)"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"16",
+"Differences between development and evaluation data",
+"Results: Patients; Table 1"
+],
+[
+"A. TRIPOD+AI",
+"Methods",
+"17",
+"Ethics approval and consent",
+"Methods: Study design (HRA and HCRW approval, IRAS 257758; consent waived)"
+],
+[
+"A. TRIPOD+AI",
+"Open science",
+"18a",
+"Funding and role of funders",
+"Funding statement"
+],
+[
+"A. TRIPOD+AI",
+"Open science",
+"18b",
+"Conflicts of interest",
+"Conflict of interest statement"
+],
+[
+"A. TRIPOD+AI",
+"Open science",
+"18c",
+"Where the protocol can be accessed; deviations",
+"Methods: Study design; Supplementary Methods S15 (deviations)"
+],
+[
+"A. TRIPOD+AI",
+"Open science",
+"18d",
+"Registration name and number",
+"Methods: Study design (OSF identifier to be added by the authors)"
+],
+[
+"A. TRIPOD+AI",
+"Open science",
+"18e",
+"Data availability",
+"Data availability statement"
+],
+[
+"A. TRIPOD+AI",
+"Open science",
+"18f",
+"Code availability",
+"Data availability statement (GitHub, Zenodo archive)"
+],
+[
+"A. TRIPOD+AI",
+"Patient and public involvement",
+"19",
+"Patient and public involvement",
+"Patient and public involvement statement; Supplementary Methods S16"
+],
+[
+"A. TRIPOD+AI",
+"Results",
+"20a",
+"Participant flow, with and without the outcome",
+"Results: Patients; Figure 1"
+],
+[
+"A. TRIPOD+AI",
+"Results",
+"20b",
+"Characteristics per data source, including predictors and missingness",
+"Table 1; Supplementary Tables ST5-ST6"
+],
+[
+"A. TRIPOD+AI",
+"Results",
+"20c",
+"Comparison of development and evaluation data",
+"Results: Patients; Table 1"
+],
+[
+"A. TRIPOD+AI",
+"Results",
+"21",
+"Participants and outcome events in each analysis",
+"Figure 1; Supplementary Table ST20"
+],
+[
+"A. TRIPOD+AI",
+"Results",
+"22",
+"Full model specification for use in new individuals",
+"Supplementary Table ST13 (ridge regression); release of the fitted model objects to be decided by the authors (decision 143)"
+],
+[
+"A. TRIPOD+AI",
+"Results",
+"23a",
+"Performance with confidence intervals, including key subgroups",
+"Results; Tables 2-3; Figures 2-4; Supplementary Tables ST10-ST11, ST17"
+],
+[
+"A. TRIPOD+AI",
+"Results",
+"23b",
+"Heterogeneity in performance across clusters",
+"Results: Calibration and drift (by year); Supplementary Table ST15, Supplementary Figure SF9"
+],
+[
+"A. TRIPOD+AI",
+"Results",
+"24",
+"Model updating results",
+"Results: Calibration and drift; Supplementary Table ST12"
+],
+[
+"A. TRIPOD+AI",
+"Discussion",
+"25",
+"Overall interpretation, including fairness",
+"Discussion"
+],
+[
+"A. TRIPOD+AI",
+"Discussion",
+"26",
+"Limitations and their effect on bias, uncertainty and generalisability",
+"Strengths and limitations"
+],
+[
+"A. TRIPOD+AI",
+"Discussion",
+"27a",
+"How poor-quality or missing input data should be handled in use",
+"Methods: Missing data (built-in imputer); Supplementary Methods S16"
+],
+[
+"A. TRIPOD+AI",
+"Discussion",
+"27b",
+"User interaction and expertise required",
+"Discussion (implications for practice); Supplementary Methods S16"
+],
+[
+"A. TRIPOD+AI",
+"Discussion",
+"27c",
+"Next steps for research",
+"Discussion (implications for practice); Conclusions"
+],
+[
+"B. TRIPOD+AI for Abstracts",
+"Abstract",
+"1",
+"Identify the study as developing or evaluating a model, target population and outcome",
+"Title"
+],
+[
+"B. TRIPOD+AI for Abstracts",
+"Abstract",
+"2",
+"Healthcare context and rationale",
+"Aims, first sentence"
+],
+[
+"B. TRIPOD+AI for Abstracts",
+"Abstract",
+"3",
+"Objectives",
+"Aims"
+],
+[
+"B. TRIPOD+AI for Abstracts",
+"Abstract",
+"4",
+"Sources of data",
+"Methods and results (UK National Adult Cardiac Surgery Audit)"
+],
+[
+"B. TRIPOD+AI for Abstracts",
+"Abstract",
+"5",
+"Eligibility criteria and setting",
+"Aims (isolated coronary artery bypass grafting); Methods and results (operation years, survivors)"
+],
+[
+"B. TRIPOD+AI for Abstracts",
+"Abstract",
+"6",
+"Outcome and time horizon",
+"Methods and results (stay over 10 days among survivors)"
+],
+[
+"B. TRIPOD+AI for Abstracts",
+"Abstract",
+"7",
+"Model type, building steps and internal validation",
+"Methods and results (six models; temporal evaluation)"
+],
+[
+"B. TRIPOD+AI for Abstracts",
+"Abstract",
+"8",
+"Performance measures",
+"Methods and results (C-statistic, calibration)"
+],
+[
+"B. TRIPOD+AI for Abstracts",
+"Abstract",
+"9",
+"Number of participants and outcome events",
+"Methods and results"
+],
+[
+"B. TRIPOD+AI for Abstracts",
+"Abstract",
+"10",
+"Predictors in the final model",
+"Methods and results (main predictors)"
+],
+[
+"B. TRIPOD+AI for Abstracts",
+"Abstract",
+"11",
+"Performance estimates with confidence intervals",
+"Methods and results"
+],
+[
+"B. TRIPOD+AI for Abstracts",
+"Abstract",
+"12",
+"Overall interpretation",
+"Conclusion"
+],
+[
+"B. TRIPOD+AI for Abstracts",
+"Abstract",
+"13",
+"Registration name and number",
+"To be added by the authors if required (OSF)"
+]
+]

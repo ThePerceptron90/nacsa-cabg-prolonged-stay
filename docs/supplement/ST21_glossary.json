@@ -1,0 +1,167 @@
+[
+ {
+  "Term": "AUC (area under the ROC curve; C-statistic)",
+  "Topic": "Discrimination",
+  "Plain-language meaning": "The chance that a randomly chosen patient with a long stay gets a higher predicted risk than a randomly chosen patient without one. 0.5 = no better than a coin toss; 1 = perfect separation."
+ },
+ {
+  "Term": "ROC curve",
+  "Topic": "Discrimination",
+  "Plain-language meaning": "Plots the share of long stays correctly flagged against the share of short stays wrongly flagged, for every possible cut-off."
+ },
+ {
+  "Term": "Precision-recall AUC",
+  "Topic": "Discrimination",
+  "Plain-language meaning": "Average share of flagged patients who truly have a long stay, across all cut-offs; compare it with the event rate (the value for an uninformative model)."
+ },
+ {
+  "Term": "Calibration",
+  "Topic": "Calibration",
+  "Plain-language meaning": "Whether predicted risks match what happens: of patients given a 20% risk, about 20% should have a long stay."
+ },
+ {
+  "Term": "Calibration-in-the-large",
+  "Topic": "Calibration",
+  "Plain-language meaning": "Whether the model predicts the right overall number of long stays. 0 is ideal; below 0 means risks are too high on average."
+ },
+ {
+  "Term": "Observed/expected ratio",
+  "Topic": "Calibration",
+  "Plain-language meaning": "Number of long stays observed divided by the number predicted. 1 is ideal."
+ },
+ {
+  "Term": "Calibration slope",
+  "Topic": "Calibration",
+  "Plain-language meaning": "Whether predictions are too extreme (slope below 1) or too modest (above 1). 1 is ideal."
+ },
+ {
+  "Term": "Calibration curve (lowess)",
+  "Topic": "Calibration",
+  "Plain-language meaning": "A smoothed line of observed proportion against predicted risk; on the diagonal = perfect calibration."
+ },
+ {
+  "Term": "ICI, E50, E90",
+  "Topic": "Calibration",
+  "Plain-language meaning": "Average, median and 90th percentile of the distance between the calibration curve and the diagonal, in risk units; smaller is better."
+ },
+ {
+  "Term": "Brier score; scaled Brier score",
+  "Topic": "Overall accuracy",
+  "Plain-language meaning": "Average squared difference between predicted risk and what happened (0 or 1); the scaled version compares it with a model that gives everyone the average risk (higher is better, 0 = no better)."
+ },
+ {
+  "Term": "Net benefit; decision curve",
+  "Topic": "Clinical usefulness",
+  "Plain-language meaning": "The benefit of flagging patients with the model, counting true flags and penalising false ones according to how much a missed long stay matters relative to an unnecessary flag (set by the threshold risk). A decision curve shows net benefit across thresholds, next to flagging everyone or no one."
+ },
+ {
+  "Term": "Threshold risk",
+  "Topic": "Clinical usefulness",
+  "Plain-language meaning": "The predicted risk above which a patient would be flagged; 10% means accepting up to 9 unnecessary flags for each long stay caught."
+ },
+ {
+  "Term": "Sensitivity, specificity, PPV, NPV",
+  "Topic": "Classification",
+  "Plain-language meaning": "Share of long stays flagged; share of short stays not flagged; share of flagged patients with a long stay; share of unflagged patients with a short stay."
+ },
+ {
+  "Term": "Top 10% / top 20% flag",
+  "Topic": "Classification",
+  "Plain-language meaning": "Flagging the 10% (20%) of patients with the highest predicted risk, an equal workload for every model."
+ },
+ {
+  "Term": "Development and temporal evaluation",
+  "Topic": "Study design",
+  "Plain-language meaning": "Models are built on operations from 2012-16 and then tested, unchanged, on later operations from 2017-19, as they would be used in practice."
+ },
+ {
+  "Term": "Cross-validation (nested)",
+  "Topic": "Study design",
+  "Plain-language meaning": "Repeatedly building the model on part of the development data and testing it on the rest, so that every patient is predicted by a model that never saw them; 'nested' means tuning is redone inside each round."
+ },
+ {
+  "Term": "Out-of-fold predictions",
+  "Topic": "Study design",
+  "Plain-language meaning": "Predictions for each development patient from the cross-validation model that did not use that patient."
+ },
+ {
+  "Term": "Overfitting",
+  "Topic": "Modelling",
+  "Plain-language meaning": "A model that learns noise in its training data and performs worse on new patients."
+ },
+ {
+  "Term": "Hyperparameter; tuning",
+  "Topic": "Modelling",
+  "Plain-language meaning": "Settings that control how a machine-learning model learns (for example the number of trees); tuning tries several settings and keeps the one that predicts best on held-out data."
+ },
+ {
+  "Term": "Logistic regression",
+  "Topic": "Modelling",
+  "Plain-language meaning": "A standard statistical model in which each predictor adds to the log-odds of the outcome."
+ },
+ {
+  "Term": "Ridge (penalised) regression",
+  "Topic": "Modelling",
+  "Plain-language meaning": "Logistic regression whose coefficients are shrunk slightly towards zero to reduce overfitting."
+ },
+ {
+  "Term": "Restricted cubic spline",
+  "Topic": "Modelling",
+  "Plain-language meaning": "A smooth curve that lets a continuous predictor (for example age) affect risk non-linearly while staying straight at the extremes."
+ },
+ {
+  "Term": "Gradient boosting (XGBoost)",
+  "Topic": "Modelling",
+  "Plain-language meaning": "Builds many small decision trees one after another, each correcting the errors of the previous ones."
+ },
+ {
+  "Term": "Random forest",
+  "Topic": "Modelling",
+  "Plain-language meaning": "Averages many decision trees, each built on a random sample of patients and predictors."
+ },
+ {
+  "Term": "Neural network (multilayer perceptron)",
+  "Topic": "Modelling",
+  "Plain-language meaning": "Layers of simple connected units that learn combinations of predictors."
+ },
+ {
+  "Term": "Platt scaling; isotonic regression",
+  "Topic": "Modelling",
+  "Plain-language meaning": "Methods that adjust a model's risks after fitting so that they match observed proportions."
+ },
+ {
+  "Term": "Recalibration (updating)",
+  "Topic": "Modelling",
+  "Plain-language meaning": "Adjusting a model's overall risk level (and spread) to a new period or setting without rebuilding it."
+ },
+ {
+  "Term": "Imputation (chained equations)",
+  "Topic": "Missing data",
+  "Plain-language meaning": "Filling a missing value with a value predicted from the patient's other recorded information; 'multiple imputation' repeats this several times with random variation to reflect uncertainty."
+ },
+ {
+  "Term": "Complete-case analysis",
+  "Topic": "Missing data",
+  "Plain-language meaning": "Using only patients with every predictor recorded."
+ },
+ {
+  "Term": "Bootstrap; 95% confidence interval",
+  "Topic": "Uncertainty",
+  "Plain-language meaning": "Re-drawing the patients at random many times to see how much a result could vary; the interval contains the middle 95% of the re-drawn results."
+ },
+ {
+  "Term": "SHAP value",
+  "Topic": "Explainability",
+  "Plain-language meaning": "How much one predictor pushed one patient's predicted risk up or down (on the log-odds scale) compared with the average patient; describes what the model uses, not cause and effect."
+ },
+ {
+  "Term": "Standardised mean difference (SMD)",
+  "Topic": "Description",
+  "Plain-language meaning": "Difference between two groups' averages divided by their spread; values below 0.1 are usually considered small."
+ },
+ {
+  "Term": "Fairness (error-rate comparison)",
+  "Topic": "Fairness",
+  "Plain-language meaning": "Checking whether the model misses long stays or wrongly flags short stays more often in some groups (for example women or older patients) when the same rule is applied to everyone."
+ }
+]

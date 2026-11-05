@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper and this archived software."
+title: "Staged prediction of prolonged length of stay after isolated CABG: analysis code"
+authors:
+  - family-names: Soleimani
+    given-names: Hamidreza
+    orcid: "https://orcid.org/0000-0003-2802-4613"
+    affiliation: "Bristol Heart Institute, University of Bristol"
+  - family-names: Dastjerdi
+    given-names: Parham
+  - family-names: Ebrahimi
+    given-names: Pouya
+  - family-names: Comanici
+    given-names: Maria
+    affiliation: "Bristol Heart Institute, University of Bristol"
+  - family-names: Rajakaruna
+    given-names: Cha
+    affiliation: "Bristol Heart Institute, University of Bristol"
+  - family-names: Mohamed Ahmed
+    given-names: Eltayeb
+    affiliation: "Bristol Heart Institute, University of Bristol"
+  - family-names: Angelini
+    given-names: Gianni
+    affiliation: "Bristol Heart Institute, University of Bristol"
+  - family-names: Fudulu
+    given-names: Daniel
+    affiliation: "Bristol Heart Institute, University of Bristol"
+license: MIT
+repository-code: "https://github.com/ThePerceptron90/nacsa-cabg-prolonged-stay"
+version: "1.0.0"

@@ -1,0 +1,160 @@
+{
+  "_note": "Search spaces fixed before any tuning (decision 95). Changes only with a recorded decision. log = sampled evenly on a log scale.",
+  "M2_ridge": {
+    "decision": 123,
+    "lambda_grid": {
+      "from": 10,
+      "to": 1e-05,
+      "values": 30,
+      "spacing": "log",
+      "scale": "glmnet (-loglik/n + lambda*penalty)"
+    },
+    "edge_rule": "best at largest: extend upward by 2 decades once; best at smallest: keep (effectively unpenalised)"
+  },
+  "M3_xgboost": {
+    "decision": 125,
+    "trials": 30,
+    "tuned": {
+      "learning_rate": {
+        "low": 0.01,
+        "high": 0.3,
+        "log": true
+      },
+      "max_depth": {
+        "low": 2,
+        "high": 10,
+        "type": "int"
+      },
+      "min_child_weight": {
+        "low": 1,
+        "high": 100,
+        "log": true
+      },
+      "subsample": {
+        "low": 0.5,
+        "high": 1.0
+      },
+      "colsample_bytree": {
+        "low": 0.5,
+        "high": 1.0
+      },
+      "reg_lambda": {
+        "low": 0.01,
+        "high": 10,
+        "log": true
+      }
+    },
+    "fixed": {
+      "n_estimators_max": 2000,
+      "early_stopping_rounds": 50,
+      "reg_alpha": 0,
+      "gamma": 0,
+      "tree_method": "hist",
+      "objective": "binary:logistic",
+      "eval_metric": "logloss"
+    },
+    "calibration": "all three options scored in every trial (decision 134); see calibration_step"
+  },
+  "M4_random_forest": {
+    "decision": 127,
+    "trials": 30,
+    "tuned": {
+      "max_features": {
+        "low": 0.05,
+        "high": 0.5
+      },
+      "min_samples_leaf": {
+        "low": 1,
+        "high": 100,
+        "log": true,
+        "type": "int"
+      },
+      "max_samples": {
+        "low": 0.3,
+        "high": 1.0
+      }
+    },
+    "fixed": {
+      "n_estimators": 500,
+      "bootstrap": true,
+      "max_depth": null,
+      "criterion": "gini"
+    },
+    "calibration": "all three options scored in every trial (decision 134); see calibration_step"
+  },
+  "M5_mlp": {
+    "decision": 128,
+    "trials": 30,
+    "tuned": {
+      "n_layers": {
+        "low": 1,
+        "high": 4,
+        "type": "int"
+      },
+      "n_neurons": {
+        "low": 16,
+        "high": 512,
+        "log": true,
+        "type": "int"
+      },
+      "learning_rate": {
+        "low": 1e-05,
+        "high": 0.01,
+        "log": true
+      },
+      "batch_size": {
+        "choices": [
+          256,
+          512,
+          1024
+        ]
+      },
+      "alpha": {
+        "low": 0.0001,
+        "high": 10,
+        "log": true,
+        "scale": "scikit-learn (L2 penalty divided by batch size)"
+      }
+    },
+    "fixed": {
+      "activation": "relu",
+      "solver": "adam",
+      "max_epochs": 200,
+      "patience": 10,
+      "min_improvement": 0.0001,
+      "early_stopping": "own loop: log loss on the inner 25% after each epoch; refit for the best number of epochs",
+      "dropout": "not available in scikit-learn"
+    },
+    "calibration": "all three options scored in every trial (decision 134); see calibration_step"
+  },
+  "fit_fallbacks": {
+    "decision": 133,
+    "regression_attempts": [
+      {
+        "solver": "newton-cholesky",
+        "max_iter": 500
+      },
+      {
+        "solver": "newton-cholesky",
+        "max_iter": 5000
+      },
+      {
+        "solver": "lbfgs",
+        "max_iter": 10000
+      }
+    ],
+    "failure": "an error, or a warning that the fit did not converge",
+    "all_attempts_fail": "imputer: fill with training median / most common value (decision 109 rule 8); model in an outer fold: failed for that stage (rule 5)",
+    "tuning_trial_error": "trial recorded as failed with its message; counts toward the trial budget; winner from completed trials; every trial failed -> model failed for that stage (rule 5)"
+  },
+  "calibration_step": {
+    "decision": 134,
+    "options_simplest_first": [
+      "none",
+      "platt",
+      "isotonic"
+    ],
+    "scored": "every trial: all three options on the inner-25% predictions, cross-fitted halves (decision 126)",
+    "tie": "log losses equal when rounded to 3 decimal places count as tied; the simpler option wins (decision 109 rule 7)"
+  }
+}

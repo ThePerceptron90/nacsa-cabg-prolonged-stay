@@ -1,0 +1,32 @@
+# ---- Patient data: never commit -------------------------------------------
+data/
+raw/
+processed/
+*.csv
+*.parquet
+*.rds
+*.sav
+*.dta
+*.xls
+*.xlsx
+*.pkl
+*.pickle
+*.feather
+
+# ---- Outputs (aggregate summaries stay on Drive, not in the repository) ----
+outputs/
+
+# ---- Notebook outputs and Python clutter ----------------------------------
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# ---- Secrets ---------------------------------------------------------------
+.env
+*.key
+*token*
+
+# ---- Data transfer pieces ---------------------------------------------------
+transfer/
+*.bin
+*.gz

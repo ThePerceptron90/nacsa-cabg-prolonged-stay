@@ -1,0 +1,28 @@
+Final models locked 8 Oct 2026 (Step 11, decision 142). sha256 of each file in $NACSA_DIR/work/final_models/.
+             stage model                      file                                                           sha256
+             preop    M0              preop_M0.pkl 719f955f4260cc9abfed33f5e0f834277760ca6d7494605c7fe0a8aaf11b4be2
+             preop    M1              preop_M1.pkl c92ab59f16788890e706c2aa9ef80f9d2f7f05c5d4982efb926f215f204be138
+             preop    M2              preop_M2.pkl 4d2e66becdfbdad247a681be967fa728f6142380b630c72266c536fae27b7a41
+             preop    M3              preop_M3.pkl 2eb6a78b6e60d4c796205057f4a7532343a69a179330450ea16b715b65c18866
+             preop    M4              preop_M4.pkl d7056bca704a6214d738ac7f359ae9e4d62b72206e895a6f0c07e2dc62767fb7
+             preop    M5              preop_M5.pkl da1d0935628e86e840ec8baecba80d9f5ee2501b4bfa6926aca81d81f2b9a2e1
+    end_of_surgery    M0     end_of_surgery_M0.pkl 29dd1a5f5bc1eaa7779e4b524d121d7c952c64777f0f43e32dacbbc2bfeffdae
+    end_of_surgery    M1     end_of_surgery_M1.pkl 2c8691324eaa339a7568338c2e7942ed90176c4ff209cabc2505e11962ce22c8
+    end_of_surgery    M2     end_of_surgery_M2.pkl 8bab65d8a7604f6aca5932243cd9b816ee1595152e94bacc37e3f3eb9f208914
+    end_of_surgery    M3     end_of_surgery_M3.pkl 481f7f9871d089dde873fc9a20577e997d99a9587c1d7878ddebda6072a5bd4e
+    end_of_surgery    M4     end_of_surgery_M4.pkl 454840751ca58c2f4b2d8d0ee855535daccceb8f7daff042b1899a17fab9b108
+    end_of_surgery    M5     end_of_surgery_M5.pkl f50c51c9d2fae273134cf12c72d1007ece60fac341de92b2c8a23f64201d8a63
+      early_postop    M0       early_postop_M0.pkl cb185a32ba7fc9dba2dda10b8498edb88a0bae5383b8d59f1fa9d0b6fe27e738
+      early_postop    M1       early_postop_M1.pkl 1cdf18eeae1d5e7b5db4e4715bfc66e229dd82f2140ab81f60ce15a55d3bd7fd
+      early_postop    M2       early_postop_M2.pkl 2f2b02772ca6f970fa4a5013a7e81ea48f5a8d93bc91443a028edcbdd5f482da
+      early_postop    M3       early_postop_M3.pkl a0324fdefefe3f26f3fe559de3e0223a3d9ee97dfecf04728a459d59a2971205
+      early_postop    M4       early_postop_M4.pkl 2e76f36ea6d17672ccf89759bf31b48a813f978a3487fc01a4a987cb00a17942
+      early_postop    M5       early_postop_M5.pkl 0d1025ae99d8baf937869bafa31256b91b88820a045ed5a22b5654f8675941de
+complication_aware    M0 complication_aware_M0.pkl 7d5b3f80c84545fec4578592908b8aff4f8ec6f33c9aff6f55274351a7ef2f6c
+complication_aware    M1 complication_aware_M1.pkl 7428046b8640e3c40fba66767829005f9a63683be48e4fc4fae7689aa737c22d
+complication_aware    M2 complication_aware_M2.pkl 288756d76b36863c0786ba4dacef6f5e649ea01b147fd82a0142ea0398b9b0b5
+complication_aware    M3 complication_aware_M3.pkl fc2f22691f5e6855aaac36407adc86834154d577f64341969ede592075377b05
+complication_aware    M4 complication_aware_M4.pkl 5b173c3adbffeaf6449a3fdb3dc18526278d31505bc2f909bc0f39f8e668796c
+complication_aware    M5 complication_aware_M5.pkl 8b43a4d05ca8d8126f834541ed769e6c753b03b5c08619ad24e3b3eab37124a8
+
+Combined digest: 02f67bf7c4e80b1aeef5fdee07c16f9bdf107f47a2c12f681ece2db9b8ae2cb4

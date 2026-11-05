@@ -1,0 +1,178 @@
+[
+ {
+  "Algorithm":"EuroSCORE II (recalibrated)",
+  "Family":"Published risk score",
+  "Role":"Benchmark (M0)",
+  "(1) Established for tabular clinical data":"Yes",
+  "(2) Probabilities directly":"Yes",
+  "(3) Shareable without patient data":"Yes",
+  "(4) No outcome-driven variable selection":"Yes",
+  "(5) Competitive on tabular data or standard comparator":"Standard comparator",
+  "Decision and reason":"Included as benchmark (decisions 87 and 93)"
+ },
+ {
+  "Algorithm":"Logistic regression (linear terms)",
+  "Family":"Regression",
+  "Role":"Comparator (M1)",
+  "(1) Established for tabular clinical data":"Yes",
+  "(2) Probabilities directly":"Yes",
+  "(3) Shareable without patient data":"Yes",
+  "(4) No outcome-driven variable selection":"Yes",
+  "(5) Competitive on tabular data or standard comparator":"Standard comparator",
+  "Decision and reason":"Included (decision 91)"
+ },
+ {
+  "Algorithm":"Ridge logistic regression with restricted cubic splines",
+  "Family":"Regression",
+  "Role":"Default headline (M2)",
+  "(1) Established for tabular clinical data":"Yes",
+  "(2) Probabilities directly":"Yes",
+  "(3) Shareable without patient data":"Yes",
+  "(4) No outcome-driven variable selection":"Yes",
+  "(5) Competitive on tabular data or standard comparator":"Yes",
+  "Decision and reason":"Included; ridge keeps every pre-specified predictor; 4 knots match the sample-size calculation (decisions 73 and 91)"
+ },
+ {
+  "Algorithm":"XGBoost",
+  "Family":"Gradient-boosted trees",
+  "Role":"Headline candidate (M3)",
+  "(1) Established for tabular clinical data":"Yes",
+  "(2) Probabilities directly":"Yes",
+  "(3) Shareable without patient data":"Yes",
+  "(4) No outcome-driven variable selection":"Yes",
+  "(5) Competitive on tabular data or standard comparator":"Yes",
+  "Decision and reason":"Included (decisions 91 and 102)"
+ },
+ {
+  "Algorithm":"Random forest",
+  "Family":"Bagged trees",
+  "Role":"Headline candidate (M4)",
+  "(1) Established for tabular clinical data":"Yes",
+  "(2) Probabilities directly":"Yes",
+  "(3) Shareable without patient data":"Yes (checked at code release; small leaves can hold patient value combinations)",
+  "(4) No outcome-driven variable selection":"Yes",
+  "(5) Competitive on tabular data or standard comparator":"Yes",
+  "Decision and reason":"Included at Hamid's request for recognisability (decisions 91 and 102; sharing check decision 142)"
+ },
+ {
+  "Algorithm":"Multilayer perceptron (scikit-learn)",
+  "Family":"Neural network",
+  "Role":"Headline candidate (M5)",
+  "(1) Established for tabular clinical data":"Yes",
+  "(2) Probabilities directly":"Yes",
+  "(3) Shareable without patient data":"Yes",
+  "(4) No outcome-driven variable selection":"Yes",
+  "(5) Competitive on tabular data or standard comparator":"Yes (TabArena 2025)",
+  "Decision and reason":"Added by decision 102 so that neural networks are pre-specified rather than reviewer-requested"
+ },
+ {
+  "Algorithm":"LightGBM",
+  "Family":"Gradient-boosted trees",
+  "Role":"Not included",
+  "(1) Established for tabular clinical data":"Yes",
+  "(2) Probabilities directly":"Yes",
+  "(3) Shareable without patient data":"Yes",
+  "(4) No outcome-driven variable selection":"Yes",
+  "(5) Competitive on tabular data or standard comparator":"Yes",
+  "Decision and reason":"Dropped by decision 102: near-duplicate of XGBoost under equal inputs and tuning; fewer candidates reduce chance wins in the selection rule"
+ },
+ {
+  "Algorithm":"CatBoost",
+  "Family":"Gradient-boosted trees",
+  "Role":"Not included",
+  "(1) Established for tabular clinical data":"Yes",
+  "(2) Probabilities directly":"Yes",
+  "(3) Shareable without patient data":"Yes",
+  "(4) No outcome-driven variable selection":"Yes",
+  "(5) Competitive on tabular data or standard comparator":"Yes",
+  "Decision and reason":"Dropped by decision 102: its distinctive native categorical handling is switched off by decision 101"
+ },
+ {
+  "Algorithm":"LASSO \/ elastic net",
+  "Family":"Regression",
+  "Role":"Not included",
+  "(1) Established for tabular clinical data":"Yes",
+  "(2) Probabilities directly":"Yes",
+  "(3) Shareable without patient data":"Yes",
+  "(4) No outcome-driven variable selection":"No",
+  "(5) Competitive on tabular data or standard comparator":"Yes",
+  "Decision and reason":"Fails (4): data-driven variable selection (decision 22)"
+ },
+ {
+  "Algorithm":"k-nearest neighbours",
+  "Family":"Instance-based",
+  "Role":"Not included",
+  "(1) Established for tabular clinical data":"Yes",
+  "(2) Probabilities directly":"Yes",
+  "(3) Shareable without patient data":"No",
+  "(4) No outcome-driven variable selection":"Yes",
+  "(5) Competitive on tabular data or standard comparator":"No",
+  "Decision and reason":"Fails (3): needs the training patients at prediction time"
+ },
+ {
+  "Algorithm":"Support vector machine",
+  "Family":"Kernel method",
+  "Role":"Not included",
+  "(1) Established for tabular clinical data":"Yes",
+  "(2) Probabilities directly":"No",
+  "(3) Shareable without patient data":"Yes",
+  "(4) No outcome-driven variable selection":"Yes",
+  "(5) Competitive on tabular data or standard comparator":"No",
+  "Decision and reason":"Fails (2): no probabilities without calibration; kernel fit time impractical beyond tens of thousands of patients (scikit-learn documentation)"
+ },
+ {
+  "Algorithm":"Naive Bayes",
+  "Family":"Probabilistic",
+  "Role":"Not included",
+  "(1) Established for tabular clinical data":"Yes",
+  "(2) Probabilities directly":"No",
+  "(3) Shareable without patient data":"Yes",
+  "(4) No outcome-driven variable selection":"Yes",
+  "(5) Competitive on tabular data or standard comparator":"No",
+  "Decision and reason":"Fails (2) and (5): distorted probabilities; assumes independent predictors"
+ },
+ {
+  "Algorithm":"AdaBoost",
+  "Family":"Boosted trees",
+  "Role":"Not included",
+  "(1) Established for tabular clinical data":"Yes",
+  "(2) Probabilities directly":"No",
+  "(3) Shareable without patient data":"Yes",
+  "(4) No outcome-driven variable selection":"Yes",
+  "(5) Competitive on tabular data or standard comparator":"No",
+  "Decision and reason":"Fails (2): distorted probabilities; superseded by gradient boosting"
+ },
+ {
+  "Algorithm":"Single decision tree",
+  "Family":"Trees",
+  "Role":"Not included",
+  "(1) Established for tabular clinical data":"Yes",
+  "(2) Probabilities directly":"Yes",
+  "(3) Shareable without patient data":"Yes",
+  "(4) No outcome-driven variable selection":"Yes",
+  "(5) Competitive on tabular data or standard comparator":"No",
+  "Decision and reason":"Fails (5): unstable and weaker than ensembles"
+ },
+ {
+  "Algorithm":"TabPFN",
+  "Family":"Foundation model",
+  "Role":"Not included",
+  "(1) Established for tabular clinical data":"No",
+  "(2) Probabilities directly":"Yes",
+  "(3) Shareable without patient data":"Yes",
+  "(4) No outcome-driven variable selection":"Yes",
+  "(5) Competitive on tabular data or standard comparator":"No",
+  "Decision and reason":"Designed for datasets up to 10000 samples (Hollmann et al. Nature 2025); training sets here are 45000-60000"
+ },
+ {
+  "Algorithm":"Stacked ensembles; explainable boosting machines",
+  "Family":"Ensembles",
+  "Role":"Not included",
+  "(1) Established for tabular clinical data":"Yes",
+  "(2) Probabilities directly":"Yes",
+  "(3) Shareable without patient data":"Partly",
+  "(4) No outcome-driven variable selection":"Yes",
+  "(5) Competitive on tabular data or standard comparator":"Yes",
+  "Decision and reason":"Judgement: hard to audit and deploy; redundant with spline regression (decision 91)"
+ }
+]

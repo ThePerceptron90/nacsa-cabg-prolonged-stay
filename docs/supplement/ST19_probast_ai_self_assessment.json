@@ -1,0 +1,290 @@
+[
+ {
+  "Part":"Development",
+  "Domain":"1 Participants and data sources",
+  "Item":"1.1",
+  "Signalling question (PROBAST+AI)":"Were appropriate data sources used?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"National Adult Cardiac Surgery Audit (NACSA) registry: prospectively collected national data on every isolated CABG operation in the UK; the study's data extract and its governance are described in the methods (decisions 54 and 94)"
+ },
+ {
+  "Part":"Development",
+  "Domain":"1 Participants and data sources",
+  "Item":"1.2",
+  "Signalling question (PROBAST+AI)":"Was an appropriate study design used?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"Registry cohort; development on 2012-16 operations and temporal evaluation on 2017-19 operations (decision 25)"
+ },
+ {
+  "Part":"Development",
+  "Domain":"1 Participants and data sources",
+  "Item":"1.3",
+  "Signalling question (PROBAST+AI)":"Did the inclusions and exclusions of study participants result in a representative dataset?",
+  "Answer":"Probably yes",
+  "How this study meets it (decisions)":"All isolated CABG operations 2012-16; in-hospital deaths and patients with unknown discharge status or stay excluded by the outcome definition (primary outcome among patients discharged alive; decision 1); composite and all-patient outcomes in sensitivity analyses S1-S2 (decision 99); flow and counts in Figure 1 and ST20"
+ },
+ {
+  "Part":"Development",
+  "Domain":"2 Predictors",
+  "Item":"2.1",
+  "Signalling question (PROBAST+AI)":"Were predictors defined and assessed in a similar way for all participants?",
+  "Answer":"Probably yes",
+  "How this study meets it (decisions)":"NICOR national data definitions; predictors with definitions that changed over time or fields introduced late were excluded (Step 3 cleaning; ST3-ST4); between-hospital recording differences cannot be checked (no hospital identifier)"
+ },
+ {
+  "Part":"Development",
+  "Domain":"2 Predictors",
+  "Item":"2.2",
+  "Signalling question (PROBAST+AI)":"Was any preprocessing of predictors similar for all participants?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"One pipeline (imputation; category coding; splines; scaling) fitted on training patients and applied unchanged to all others (decisions 84 and 101)"
+ },
+ {
+  "Part":"Development",
+  "Domain":"2 Predictors",
+  "Item":"2.3",
+  "Signalling question (PROBAST+AI)":"Were predictor assessments made without knowledge of outcome data?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"Predictors are recorded at or before each prediction moment; the outcome (length of stay) is only known at discharge"
+ },
+ {
+  "Part":"Development",
+  "Domain":"2 Predictors",
+  "Item":"2.4",
+  "Signalling question (PROBAST+AI)":"Were the predictors included in the model available at the time the model was intended to be used?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"Stage-specific predictor sets defined by when information becomes known (pre-operative; intra-operative, at the end of surgery; early post-operative) (decisions 51 and 57-68); the complication-aware model is labelled as a ceiling analysis not usable in practice (decision 90)"
+ },
+ {
+  "Part":"Development",
+  "Domain":"3 Outcome",
+  "Item":"3.1",
+  "Signalling question (PROBAST+AI)":"Were outcomes defined and assessed appropriately?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"Post-operative stay over 10 whole days among patients discharged alive (decision 1); cut-offs of 7 and 14 days in sensitivity analyses S3-S4 (decision 99)"
+ },
+ {
+  "Part":"Development",
+  "Domain":"3 Outcome",
+  "Item":"3.2",
+  "Signalling question (PROBAST+AI)":"Were outcomes defined and assessed in a similar way for all participants?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"Same registry field and derivation for every patient (Step 3 rules O1-O4; ST3)"
+ },
+ {
+  "Part":"Development",
+  "Domain":"3 Outcome",
+  "Item":"3.3",
+  "Signalling question (PROBAST+AI)":"Were outcome assessments made without use or knowledge of predictor data?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"Length of stay is an administrative date difference not determined from predictors"
+ },
+ {
+  "Part":"Development",
+  "Domain":"3 Outcome",
+  "Item":"3.4",
+  "Signalling question (PROBAST+AI)":"Was the time interval between predictor assessment and outcome assessment appropriate?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"Outcome assessed at discharge for every patient; no censoring among patients discharged alive"
+ },
+ {
+  "Part":"Development",
+  "Domain":"4 Analysis",
+  "Item":"4.1",
+  "Signalling question (PROBAST+AI)":"Was there evidence that the sample size was reasonable?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"Formal calculation (Riley et al. 2020): available patients are at least 9.7 times the required minimum at every stage (ST7; decision 73)"
+ },
+ {
+  "Part":"Development",
+  "Domain":"4 Analysis",
+  "Item":"4.2",
+  "Signalling question (PROBAST+AI)":"Were continuous and categorical predictors handled appropriately?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"No dichotomisation; restricted cubic splines in regression; categories with clinical reference levels (decisions 29 and 101)"
+ },
+ {
+  "Part":"Development",
+  "Domain":"4 Analysis",
+  "Item":"4.3",
+  "Signalling question (PROBAST+AI)":"Were participants with missing or censored data handled appropriately in the analysis?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"Stage-ordered chained-equation imputation fitted inside every training set without the outcome (decisions 77-85); multiple imputation (S5) and complete cases (S6) as sensitivity analyses (decisions 74 and 78)"
+ },
+ {
+  "Part":"Development",
+  "Domain":"4 Analysis",
+  "Item":"4.4",
+  "Signalling question (PROBAST+AI)":"If methods to address class imbalance were used, was the model or the model predictions recalibrated?",
+  "Answer":"Not applicable",
+  "How this study meets it (decisions)":"No resampling or reweighting for class imbalance was used"
+ },
+ {
+  "Part":"Development",
+  "Domain":"4 Analysis",
+  "Item":"4.5",
+  "Signalling question (PROBAST+AI)":"Were methods used to address potential model overfitting?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"Ridge penalty; tuning of every machine-learning model on inner splits with early stopping; calibration step chosen on held-out data; nested cross-validation (decisions 92-95 and 123-134)"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"1 Participants and data sources",
+  "Item":"1.1",
+  "Signalling question (PROBAST+AI)":"Were appropriate data sources used?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"Same national registry; temporal evaluation cohort 2017-19 (decision 25)"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"1 Participants and data sources",
+  "Item":"1.2",
+  "Signalling question (PROBAST+AI)":"Was an appropriate study design used?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"Temporal external evaluation on later operations never used for any modelling choice (validation lock; decision 25)"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"1 Participants and data sources",
+  "Item":"1.3",
+  "Signalling question (PROBAST+AI)":"Did the inclusions and exclusions of study participants result in a representative dataset?",
+  "Answer":"Probably yes",
+  "How this study meets it (decisions)":"Same eligibility rules as development; flow in Figure 1"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"2 Predictors",
+  "Item":"2.1",
+  "Signalling question (PROBAST+AI)":"Were predictors defined and assessed in a similar way for all participants?",
+  "Answer":"Probably yes",
+  "How this study meets it (decisions)":"Same national definitions; two fields with changed meaning after 2017 were excluded (ST4)"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"2 Predictors",
+  "Item":"2.2",
+  "Signalling question (PROBAST+AI)":"Was any preprocessing of predictors similar for all participants?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"The locked development pipeline (imputer and inputs) applied unchanged (decision 142)"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"2 Predictors",
+  "Item":"2.3",
+  "Signalling question (PROBAST+AI)":"Were predictor assessments made without knowledge of outcome data?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"As for development"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"2 Predictors",
+  "Item":"2.4",
+  "Signalling question (PROBAST+AI)":"Were the predictors included in the model available at the time the model was intended to be used?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"As for development"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"3 Outcome",
+  "Item":"3.1",
+  "Signalling question (PROBAST+AI)":"Were outcomes defined and assessed appropriately?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"As for development"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"3 Outcome",
+  "Item":"3.2",
+  "Signalling question (PROBAST+AI)":"Were outcomes defined and assessed in a similar way for all participants?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"As for development"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"3 Outcome",
+  "Item":"3.3",
+  "Signalling question (PROBAST+AI)":"Were outcome assessments made without use or knowledge of predictor data?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"As for development"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"3 Outcome",
+  "Item":"3.4",
+  "Signalling question (PROBAST+AI)":"Was the time interval between predictor assessment and outcome assessment appropriate?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"As for development"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"4 Analysis",
+  "Item":"4.1",
+  "Signalling question (PROBAST+AI)":"Was model evaluation based on only apparent performance avoided?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"Internal: out-of-fold predictions from nested cross-validation; external: 2017-19 temporal evaluation of locked models (decisions 92 and 142)"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"4 Analysis",
+  "Item":"4.2",
+  "Signalling question (PROBAST+AI)":"Was there evidence that the sample size was reasonable?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"Evaluation sample-size calculation (Riley et al. 2021) met (ST7)"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"4 Analysis",
+  "Item":"4.3",
+  "Signalling question (PROBAST+AI)":"Were participants with missing or censored data handled appropriately in the analysis?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"Development imputation models applied to 2017-19 predictors; patients with unknown outcome excluded (no outcome imputation)"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"4 Analysis",
+  "Item":"4.4",
+  "Signalling question (PROBAST+AI)":"If methods to address class imbalance were used, was the evaluation done in a dataset without correction for imbalance?",
+  "Answer":"Not applicable",
+  "How this study meets it (decisions)":"No correction for class imbalance was used"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"4 Analysis",
+  "Item":"4.5",
+  "Signalling question (PROBAST+AI)":"If data splitting was done to create training and test datasets, was there evidence that data leakage was avoided?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"Validation lock in code (2017-19 loads only for final evaluation); imputer and inputs fitted on training parts only; model files fingerprinted before evaluation (decisions 25 and 142)"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"4 Analysis",
+  "Item":"4.6",
+  "Signalling question (PROBAST+AI)":"If resampling methods were used to evaluate model performance, were all model development steps replicated in the resampling process?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"Imputation; coding; tuning and calibration repeated inside every outer fold (decisions 84 and 92)"
+ },
+ {
+  "Part":"Evaluation",
+  "Domain":"4 Analysis",
+  "Item":"4.7",
+  "Signalling question (PROBAST+AI)":"Was the predictive performance of the model evaluated appropriately, for example calibration, discrimination, and net benefit?",
+  "Answer":"Yes",
+  "How this study meets it (decisions)":"AUC; calibration-in-the-large and slope; calibration curves with ICI\/E50\/E90; scaled Brier score; net benefit and decision curves; paired bootstrap 95% CIs (decisions 86 and 96-98)"
+ },
+ {
+  "Part":"Judgement (draft)",
+  "Domain":"Overall",
+  "Item":"Risk of bias",
+  "Signalling question (PROBAST+AI)":"Development and evaluation",
+  "Answer":"Low (draft)",
+  "How this study meets it (decisions)":"All signalling questions answered yes or probably yes; to be confirmed independently by a co-author at Step 20"
+ },
+ {
+  "Part":"Judgement (draft)",
+  "Domain":"Overall",
+  "Item":"Applicability",
+  "Signalling question (PROBAST+AI)":"Intended use: planning flag for prolonged stay after isolated CABG in UK hospitals",
+  "Answer":"Low concern (draft)",
+  "How this study meets it (decisions)":"UK national data; ethnicity and deprivation not available and hospital not identified (limitations)"
+ }
+]

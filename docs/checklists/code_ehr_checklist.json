@@ -1,0 +1,44 @@
+[
+[
+"Area",
+"Minimum standard (Kotecha et al. BMJ 2022)",
+"How this study meets it",
+"Where reported",
+"Self-rating"
+],
+[
+"1. Dataset construction and linkage",
+"Flow diagram of datasets used, and description of any linkage, in the report or supplement. (a) source of datasets; (b) how observed and missing data were identified and addressed, proportion observed for each variable; (c) completeness of follow-up; (d) linkage methods",
+"Single national registry extract, no linkage; flow diagram of all exclusions; missingness of every predictor by cohort and by year; follow-up is the index admission (outcome missing for 1,142 development and 32 evaluation patients, excluded)",
+"Figure 1; Methods: Study design and Missing data; Supplementary Tables ST5, ST20; Supplementary Figures SF1-SF2",
+"Minimum met; preferred met (protocol frozen and shared before modelling)"
+],
+[
+"2. Data fit for purpose",
+"Clear statements on the process of coding. (a) origin, clinical processes and purpose of the data; (b) coding systems and any manipulation of coded data; (c) quality assessment for data capture; (d) potential sources of bias",
+"National clinical audit collected by cardiac units for quality improvement; audit field definitions (NICOR dataset specification) and every recoding listed; completeness, consistency and plausibility checks; biases discussed (blank comorbidities treated as absent, unrecorded social factors, deaths excluded)",
+"Methods: Study design; Supplementary Methods S1-S2; Supplementary Tables ST1, ST3-ST4; Strengths and limitations",
+"Minimum met; preferred met (protocol)"
+],
+[
+"3. Disease and outcome definitions",
+"State the codes used to define diseases, treatments, conditions and outcomes before analysis. (a) code lists; (b) coding manual access; (c) phenotyping algorithms; (d) validation of coding",
+"Isolated CABG and every predictor defined from audit fields (no diagnostic code lists are used in this registry); outcome defined from recorded length of stay; definitions fixed in the protocol before modelling; audit data validation described in previous analyses",
+"Methods: Outcome and Prediction moments and predictors; Supplementary Table ST1; protocol",
+"Minimum met; preferred met (protocol)"
+],
+[
+"4. Analysis",
+"Describe the analysis, including statistical and machine-learning methods. (a) all statistical methods; (b) links to code, preferably open source; (c) testing assumptions, model fit and internal validation; (d) generalisability and external validation",
+"All methods described with a frozen statistical analysis plan; open-source code; nested cross-validation and calibration; temporal evaluation on later patients",
+"Methods; Supplementary Methods S3-S15; Data availability (code)",
+"Minimum met; preferred met (statistical analysis plan frozen before analysis)"
+],
+[
+"5. Ethics and governance",
+"Statements on how Good Clinical Practice and data protection principles were met. (a) consent or governance without consent; (b) data privacy; (c) patient and public involvement; (d) access to source data or code",
+"HRA and HCRW approval (IRAS 257758), consent waived, Declaration of Helsinki, UK GDPR; pseudonymised extract, aggregate outputs only with small-number suppression; no patient and public involvement; data via NICOR, code open",
+"Methods: Study design and Software, data governance and use of artificial intelligence tools; Patient and public involvement; Data availability",
+"Minimum met; preferred not met (no patient and public engagement)"
+]
+]

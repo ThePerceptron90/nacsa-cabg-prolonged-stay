@@ -1,0 +1,410 @@
+[
+ [
+  "#",
+  "Reference",
+  "Used for",
+  "Status"
+ ],
+ [
+  "R1",
+  "Riley RD, Ensor J, Snell KIE, Harrell FE, Martin GP, Reitsma JB, Moons KGM, Collins G, van Smeden M. Calculating the sample size required for developing a clinical prediction model. BMJ 2020;368:m441. doi:10.1136/bmj.m441",
+  "Development sample size (decision 73)",
+  "verified 7 Oct 2026: Europe PMC record (PMID 32188600) and Crossref; the method paper for the development sample size criteria"
+ ],
+ [
+  "R2",
+  "Riley RD, Debray TPA, Collins GS, Archer L, Ensor J, van Smeden M, Snell KIE. Minimum sample size for external validation of a clinical prediction model with a binary outcome. Stat Med 2021;40:4230-4251. doi:10.1002/sim.9025",
+  "Validation sample size (decision 73)",
+  "verified 7 Oct 2026: abstract (Europe PMC, PMID 34031906): sample size to precisely estimate O/E, calibration slope, C statistic and net benefit in external validation"
+ ],
+ [
+  "R3",
+  "Riley RD, Van Calster B, Collins GS. A note on estimating the Cox-Snell R2 from a reported C statistic (AUROC) to inform sample size calculations for developing a prediction model with a binary outcome. Stat Med 2021;40:859-864. doi:10.1002/sim.8806",
+  "C-to-R2 conversion (decision 73; checked by our own simulation)",
+  "verified 7 Oct 2026: abstract (Europe PMC, PMID 33283904): derives Cox-Snell R2 from a reported C statistic for sample size calculations; Stata and R code and a small simulation"
+ ],
+ [
+  "R4",
+  "Sisk R, Sperrin M, Peek N, van Smeden M, Martin GP. Imputation and missing indicators for handling missing data in the development and deployment of clinical prediction models: a simulation study. Stat Methods Med Res 2023",
+  "Single vs multiple imputation, outcome in imputer, missing indicators (decisions 76, 77, 81, 83)",
+  "opened"
+ ],
+ [
+  "R5",
+  "Mi J, Tendulkar RD, Sittenfeld SMC, Patil S, Zabor EC. Combining missing data imputation and internal validation in clinical risk prediction models. Stat Med 2025;44(18-19):e70203. doi:10.1002/sim.70203",
+  "Impute within each resample; deterministic imputation for deployable models (decisions 82, 84)",
+  "opened"
+ ],
+ [
+  "R6",
+  "von Hippel PT. How many imputations do you need? A two-stage calculation using a quadratic rule. Sociol Methods Res 2020",
+  "m = 10 (decision 78)",
+  "opened (summary)"
+ ],
+ [
+  "R7",
+  "Rubin DB. Multiple Imputation for Nonresponse in Surveys. New York: Wiley, 1987. doi:10.1002/9780470316696",
+  "Classic argument that few imputations (about 3-5) suffice for point estimates; not followed (decision 78)",
+  "checked 7 Oct 2026 via secondary published sources only (book not opened): Rubin's relative-efficiency formula led to the conclusion that few imputations (about 3-5) suffice for point estimates (e.g. PMC4934387); cite as the classic small-m argument that we did not follow"
+ ],
+ [
+  "R8",
+  "White IR, Royston P, Wood AM. Multiple imputation using chained equations: issues and guidance for practice. Stat Med 2011;30:377-399. doi:10.1002/sim.4067",
+  "Linear rule, rejected (decision 78)",
+  "abstract opened (Europe PMC); the rule 'm at least the percentage of incomplete cases' confirmed via secondary sources (von Hippel, statisticalhorizons.com/how-many-imputations) on 7 Oct 2026; full text paywalled"
+ ],
+ [
+  "R9",
+  "Moons KGM et al. PROBAST: explanation and elaboration. Ann Intern Med 2019",
+  "Item 4.4 missing data (decisions 76, 83)",
+  "opened"
+ ],
+ [
+  "R10",
+  "Moons KGM, Donders RA, Stijnen T, Harrell FE. Using the outcome for imputation of missing predictor values was preferred. J Clin Epidemiol 2006;59:1092-1101. doi:10.1016/j.jclinepi.2006.01.009",
+  "Counter-argument on outcome in imputer (decision 81)",
+  "verified 7 Oct 2026: abstract (Europe PMC, PMID 16980150): MI with the outcome gave unbiased coefficients, MI without the outcome underestimated them; about explanatory coefficients, not prediction deployment"
+ ],
+ [
+  "R11",
+  "de Jong Y et al. Appraising prediction research: a guide and meta-review on bias and applicability assessment using PROBAST. Nephrology 2021",
+  "PROBAST interpretation (decision 76)",
+  "opened"
+ ],
+ [
+  "R12",
+  "Steyerberg EW, Vergouwe Y. Towards better clinical prediction models: seven steps for development and an ABCD for validation. Eur Heart J 2014;35(29):1925-1931",
+  "ABCD core set; AUC insensitive to calibration; miscalibration fixable by updating (decision 86)",
+  "opened: https://pmc.ncbi.nlm.nih.gov/articles/PMC4155437"
+ ],
+ [
+  "R13",
+  "Collins GS, Dhiman P, Ma J, et al. Evaluation of clinical prediction models (part 1): from development to external validation. BMJ 2024",
+  "Calibration and discrimination assessed together; no single measure sufficient (decision 86)",
+  "opened: https://hbiostat.org/papers/col24eva.pdf"
+ ],
+ [
+  "R14",
+  "Van Calster B, Collins GS, Vickers AJ, Wynants L, Kerr KF, Barreñada L, Varoquaux G, Singh K, Moons KGM, Hernandez-Boussard T, et al. Evaluation of performance measures in predictive artificial intelligence models to support medical decisions: overview and guidance. Lancet Digit Health 2025;7:100916. doi:10.1016/j.landig.2025.100916 (preprint arXiv:2412.10288)",
+  "Essential measures: AUROC, calibration plot, net benefit; discourages accuracy and F1 (decision 86)",
+  "verified 7 Oct 2026: journal version found (Lancet Digit Health 2025, Viewpoint; abstract, Europe PMC): essential to report AUROC, calibration plot, net benefit with decision curve, and risk distributions by outcome; F1 is neither proper nor decision-analytic"
+ ],
+ [
+  "R15",
+  "Demler OV, Pencina MJ, D'Agostino RB. Misuse of DeLong test to compare AUCs for nested models. Stat Med 2012;31(23):2577-2587",
+  "Why no DeLong test for stage comparisons (decision on item 2)",
+  "opened (abstract): https://scholars.duke.edu/display/pub952688"
+ ],
+ [
+  "R16",
+  "Pepe MS, Kerr KF, Longton G, Wang Z. Testing for improvement in prediction model performance. Stat Med 2013;32:1467-1482. doi:10.1002/sim.5727",
+  "Testing AUC differences is redundant/problematic (item 2)",
+  "verified 7 Oct 2026: abstract (Europe PMC, PMC3625503): testing for improvement is equivalent to testing the new predictor as a risk factor, so redundant; standard AUC-difference tests extremely conservative; focus on estimation"
+ ],
+ [
+  "R17",
+  "Kerr KF, Wang Z, Janes H, McClelland RL, Psaty BM, Pepe MS. Net reclassification indices for evaluating risk prediction instruments: a critical review. Epidemiology 2014;25:114-121. doi:10.1097/EDE.0000000000000018",
+  "Why no NRI/IDI (item 2)",
+  "verified 7 Oct 2026: abstract (Europe PMC, PMC3918180): recommends against NRI with 3+ categories; category-free NRI can mislead; preferred single summary of increment is improvement in net benefit"
+ ],
+ [
+  "R18",
+  "Christodoulou E, Ma J, Collins GS, Steyerberg EW, Verbakel JY, Van Calster B. A systematic review shows no performance benefit of machine learning over logistic regression for clinical prediction models. J Clin Epidemiol 2019;110:12-22",
+  "Regression as default; ML must earn the headline (item 3)",
+  "opened (abstract): https://research.birmingham.ac.uk/en/publications/a-systematic-review-shows-no-performance-benefit-of-machine-learn/"
+ ],
+ [
+  "R19",
+  "Collins GS, Moons KGM, Dhiman P, et al. TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods. BMJ 2024 (and expanded checklist / explanation)",
+  "Items 12c, 12e: state criteria for the model put forward and for judging superiority; no data leakage (decision 88)",
+  "opened: https://www.tripod-statement.org/wp-content/uploads/2024/04/TRIPODAI-Supplement.pdf"
+ ],
+ [
+  "R20",
+  "Cawley GC, Talbot NLC. On over-fitting in model selection and subsequent selection bias in performance evaluation. J Mach Learn Res 2010;11:2079-2107",
+  "Selection bias when the same data select and evaluate (decision 88; item 9 nested CV)",
+  "opened (abstract): https://mlanthology.org/jmlr/2010/cawley2010jmlr-overfitting/"
+ ],
+ [
+  "R21",
+  "Grinsztajn L, Oyallon E, Varoquaux G. Why do tree-based models still outperform deep learning on typical tabular data? NeurIPS 2022",
+  "Tree ensembles state of the art on tabular data (decision 91); search spaces for XGBoost, random forest and the MLP (decisions 102, 125, 127, 128)",
+  "opened (abstract): https://mlanthology.org/neurips/2022/grinsztajn2022neurips-treebased/"
+ ],
+ [
+  "R22",
+  "McElfresh D, Khandagale S, Valverde J, et al. When do neural nets outperform boosted trees on tabular data? NeurIPS 2023 (Datasets and Benchmarks)",
+  "NN vs GBDT gaps often minimal; GBDT tuning matters more; GBDT better on skewed features (decision 91)",
+  "opened (abstract): https://proceedings.neurips.cc/paper_files/paper/2023/hash/f06d5ebd4ff40b40dd97e30cee632123-Abstract-Datasets_and_Benchmarks.html"
+ ],
+ [
+  "R23",
+  "Niculescu-Mizil A, Caruana R. Predicting good probabilities with supervised learning. Proceedings of ICML 2005",
+  "Calibration by algorithm: boosted trees/SVM sigmoid distortion, naive Bayes towards 0/1, RF inconsistent (decision 91; item 9)",
+  "opened: https://www.cs.cornell.edu/~alexn/papers/calibration.icml05.crc.rev3.pdf"
+ ],
+ [
+  "R24",
+  "Hastie T, Tibshirani R, Friedman J. The Elements of Statistical Learning, 2nd ed. Springer 2009, chapter 10 (boosting; loss functions and robustness)",
+  "AdaBoost exponential loss less robust to noisy labels; gradient boosting generalises AdaBoost (decision 91)",
+  "checked 7 Oct 2026 via secondary sources (book site unreachable from session): section 10.4 Exponential loss and AdaBoost; section 10.6 Loss functions and robustness; cite as Hastie et al. 2009, sections 10.4-10.6. Page numbers to check against the PDF before submission"
+ ],
+ [
+  "R25",
+  "Bergstra J, Bardenet R, Bengio Y, Kégl B. Algorithms for hyper-parameter optimization. Advances in Neural Information Processing Systems 24 (NIPS 2011)",
+  "Tree-structured Parzen estimator (TPE) search (decision 95)",
+  "bibliographic details checked against the proceedings listing: https://proceedings.nips.cc/paper_files/paper/2011/file/86e8f7ab32cfd12577bc2619bc635690-Paper.pdf; full text to read before methods are written"
+ ],
+ [
+  "R26",
+  "Akiba T, Sano S, Yanase T, Ohta T, Koyama M. Optuna: a next-generation hyperparameter optimization framework. Proceedings of KDD 2019",
+  "Tuning software and TPE sampler (decisions 95, 129-131; no pruning, decision 130)",
+  "bibliographic details checked against the arXiv listing: https://arxiv.org/abs/1907.10902; full text to read before methods are written"
+ ],
+ [
+  "R27",
+  "Carpenter J, Bithell J. Bootstrap confidence intervals: when, which, what? A practical guide for medical statisticians. Stat Med 2000;19(9):1141-1164",
+  "Number of replicates and choice of interval method (decision 96)",
+  "bibliographic details confirmed (Europe PMC, PMID 10797513); abstract: reviews when and which bootstrap CI to use, with a flow chart; full text paywalled, the exact replicate advice to check via library access"
+ ],
+ [
+  "R28",
+  "Efron B, Tibshirani RJ. An Introduction to the Bootstrap. Chapman & Hall, 1993",
+  "At least ~1,000 replicates for percentile intervals (decision 96)",
+  "checked 7 Oct 2026 via secondary sources only (book not opened): Efron & Tibshirani advise at least about 1,000 replicates for percentile intervals; Chapman & Hall 1993 confirmed. Keep R31 (opened) as the primary source for replicate numbers"
+ ],
+ [
+  "R29",
+  "Vickers AJ, Cronin AM, Elkin EB, Gonen M. Extensions to decision curve analysis, a novel method for evaluating diagnostic tests, prediction models and molecular markers. BMC Med Inform Decis Mak 2008;8:53",
+  "Bootstrap CIs for net benefit (decision 96)",
+  "opened (full text, Europe PMC PMC2611975): proposes bootstrap CIs for net benefit and for the difference in net benefit between models at a few chosen thresholds; percentile limits, 2000 replications; models refitted in each replicate there because it uses development data (ours are fixed in 2017-19)"
+ ],
+ [
+  "R30",
+  "Riley RD, Archer L, Snell KIE, et al. Evaluation of clinical prediction models (part 2): how to undertake an external validation study. BMJ 2024;384:e074820",
+  "CIs required for every performance measure in a validation study (decision 96)",
+  "opened (full text, Europe PMC PMC10788734): requires 95% CIs for calibration measures and c statistic and a CI band on the calibration curve; does not prescribe the bootstrap"
+ ],
+ [
+  "R31",
+  "Hesterberg TC. What teachers should know about the bootstrap: resampling in the undergraduate statistics curriculum. Am Stat 2015;69(4):371-386. doi:10.1080/00031305.2015.1089789",
+  "Number of replicates: recommends 10,000 routinely, more if borderline; considered, not adopted (decision 96)",
+  "opened (full text, arXiv:1411.5279; journal details via Crossref)"
+ ],
+ [
+  "R32",
+  "Steyerberg EW, Borsboom GJ, van Houwelingen HC, Eijkemans MJ, Habbema JD. Validation and updating of predictive logistic regression models: a study on sample size and shrinkage. Stat Med 2004;23:2567-2586. doi:10.1002/sim.1844",
+  "Updated models tested on independent patients; parsimonious updating (recalibration) preferable to extensive revision (decision 97)",
+  "opened (abstract, Europe PMC)"
+ ],
+ [
+  "R33",
+  "Janssen KJM, Moons KGM, Kalkman CJ, Grobbee DE, Vergouwe Y. Updating methods improved the performance of a clinical prediction model in new patients. J Clin Epidemiol 2008;61:76-86. doi:10.1016/j.jclinepi.2007.04.018",
+  "Updated on one set, tested on other patients; simple recalibration improved calibration as much as revision; no method improved discrimination (decision 97)",
+  "opened (abstract, Europe PMC)"
+ ],
+ [
+  "R34",
+  "Vergouwe Y, Nieboer D, Oostenbrink R, et al. A closed testing procedure to select an appropriate method for updating prediction models. Stat Med 2017;36:4529-4539. doi:10.1002/sim.7179",
+  "Closed testing to choose an updating method; recalibration-in-the-large often sufficient; considered, not used (decision 97)",
+  "opened (abstract, Europe PMC)"
+ ],
+ [
+  "R35",
+  "Binuya MAE, Engelhardt EG, Schats W, Schmidt MK, Steyerberg EW. Methodological guidance for the evaluation and updating of clinical prediction models: a systematic review. BMC Med Res Methodol 2022;22:316. doi:10.1186/s12874-022-01801-8",
+  "Miscalibration in new data resolved by simple updating (recalibration-in-the-large, slope adjustment); hierarchy of updating methods (decision 97)",
+  "opened (full text, Europe PMC PMC9742671)"
+ ],
+ [
+  "R36",
+  "Davis SE, Lasko TA, Chen G, Siew ED, Matheny ME. Calibration drift in regression and machine learning models for acute kidney injury. J Am Med Inform Assoc 2017;24:1052-1061. doi:10.1093/jamia/ocx030",
+  "Over 9 years discrimination held while all models increasingly overpredicted as the event rate fell; drift differed between regression and ML (decision 97)",
+  "opened (abstract, Europe PMC)"
+ ],
+ [
+  "R37",
+  "Vickers AJ, van Calster B, Steyerberg EW. A simple, step-by-step guide to interpreting decision curve analysis. Diagn Progn Res 2019;3:18. doi:10.1186/s41512-019-0064-7",
+  "Threshold range set first on clinical grounds; highest net benefit preferred irrespective of statistical significance (decision 98)",
+  "opened (full text, Europe PMC PMC6777022)"
+ ],
+ [
+  "R38",
+  "Van Calster B, Wynants L, Verbeek JFM, et al. Reporting and interpreting decision curve analysis: a guide for investigators. Eur Urol 2018;74:796-804. doi:10.1016/j.eururo.2018.08.038",
+  "Model must be superior to all other strategies (incl. treat all / none) across the range of reasonable thresholds (decision 98)",
+  "opened (abstract, Europe PMC)"
+ ],
+ [
+  "R39",
+  "Kerr KF, Brown MD, Zhu K, Janes H. Assessing the clinical impact of risk prediction models with decision curves: guidance for correct interpretation and appropriate use. J Clin Oncol 2016;34:2534-2540. doi:10.1200/JCO.2015.65.5654",
+  "Decision curves cannot identify the optimal risk threshold; miscalibrated models (decision 98)",
+  "opened (abstract, Europe PMC)"
+ ],
+ [
+  "R40",
+  "Vickers AJ, Van Calster B, Steyerberg EW. Net benefit approaches to the evaluation of prediction models, molecular markers, and diagnostic tests. BMJ 2016;352:i6. doi:10.1136/bmj.i6",
+  "Net benefit methods; 95% CIs for net benefit available (decision 98)",
+  "opened (full text, Europe PMC PMC4724785)"
+ ],
+ [
+  "R41",
+  "Jafarkhani A, Imani B, Saeedi S, Shams A. Predicting factors affecting postoperative length of stay in patients undergoing coronary artery bypass graft surgery using machine learning methods: a systematic review. Health Sci Rep 2026;9:e72391. doi:10.1002/hsr2.72391",
+  "Prolonged-stay cut-offs after CABG range from over 1 to over 14 days; over 7 days common (decision 99)",
+  "opened (full text, Europe PMC PMC13103274)"
+ ],
+ [
+  "R42",
+  "Peterson ED, Coombs LP, Ferguson TB, et al. Hospital variability in length of stay after coronary artery bypass surgery: results from the Society of Thoracic Surgeon's National Cardiac Database. Ann Thorac Surg 2002;74:464-473. doi:10.1016/s0003-4975(02)03694-9",
+  "STS registry: prolonged stay defined as over 14 days (5% of 496,797 isolated CABG) (decision 99)",
+  "opened (abstract, Europe PMC)"
+ ],
+ [
+  "R43",
+  "glmnet reference manual (Friedman, Hastie, Tibshirani et al.), CRAN: argument 'standardize'",
+  "Standardisation before penalised regression by default; coefficients returned on original scale (decision 101)",
+  "opened: https://cran.r-project.org/web/packages/glmnet/refman/glmnet.html"
+ ],
+ [
+  "R44",
+  "LightGBM 4.7 documentation, Advanced Topics: Categorical Feature Support",
+  "Native categorical splits 'often perform better than one-hot encoding' (decision 101)",
+  "opened: https://lightgbm.readthedocs.io/en/latest/Advanced-Topics.html"
+ ],
+ [
+  "R45",
+  "CatBoost documentation, training parameters: one_hot_max_size",
+  "Default 2 on CPU: categories with more levels encoded by target statistics (decision 101)",
+  "opened: https://catboost.ai/docs/en/references/training-parameters/common"
+ ],
+ [
+  "R46",
+  "Harrell FE. Hmisc R package documentation: rcspline.eval (restricted cubic spline knot placement)",
+  "Default knots for 4-6 knots: outer quantiles 0.05 and 0.95, others equally spaced on the quantile scale (decision 101)",
+  "opened: https://search.r-project.org/CRAN/refmans/Hmisc/html/rcspline.eval.html"
+ ],
+ [
+  "R47",
+  "Royston P, Altman DG, Sauerbrei W. Dichotomizing continuous predictors in multiple regression: a bad idea. Stat Med 2006;25:127-141. doi:10.1002/sim.2331",
+  "Do not categorise continuous predictors in regression (decisions 21, 91)",
+  "opened (abstract, Europe PMC)"
+ ],
+ [
+  "R48",
+  "Gauthier J, Wu QV, Gooley TA. Cubic splines to model relationships between continuous variables and outcomes: a guide for clinicians. Bone Marrow Transplant 2020;55:675-680. doi:10.1038/s41409-019-0679-x",
+  "Cubic splines as the tool for continuous predictors (decision 91)",
+  "opened (abstract, Europe PMC)"
+ ],
+ [
+  "R49",
+  "Erickson N, Purucker L, Tschalzev A, Holzmüller D, Mutalik Desai P, Salinas D, Hutter F. TabArena: a living benchmark for machine learning on tabular data. NeurIPS 2025 Datasets and Benchmarks Track. arXiv:2506.16791",
+  "Boosted trees still strong; deep learning caught up under larger budgets with ensembling; foundation models excel on small data (decision 102)",
+  "opened (abstract, arXiv); full author list checked against arXiv v4 on 7 Oct 2026; accepted at NeurIPS 2025 Datasets and Benchmarks Track (spotlight)"
+ ],
+ [
+  "R50",
+  "Hollmann N, Müller S, Purucker L, et al. Accurate predictions on small data with a tabular foundation model. Nature 2025;637:319-326. doi:10.1038/s41586-024-08328-6",
+  "TabPFN designed for datasets up to 10,000 samples (decision 102)",
+  "opened (abstract, Europe PMC)"
+ ],
+ [
+  "R51",
+  "scikit-learn 1.9 documentation: sklearn.svm.SVC; Naive Bayes user guide",
+  "Kernel SVM fit time at least quadratic in sample size; naive Bayes a bad probability estimator (decision 102)",
+  "opened: https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html ; https://scikit-learn.org/stable/modules/naive_bayes.html"
+ ],
+ [
+  "R52",
+  "Riley RD, Snell KIE, Martin GP, et al. Penalization and shrinkage methods produced unreliable clinical prediction models especially when sample size was small. J Clin Epidemiol 2021;132:88-96. doi:10.1016/j.jclinepi.2020.12.005",
+  "Penalisation unreliable in small samples; best applied with large effective sample sizes (decision 103)",
+  "opened (abstract, Europe PMC)"
+ ],
+ [
+  "R53",
+  "Lundberg SM, Lee SI. A unified approach to interpreting model predictions. Advances in Neural Information Processing Systems 30 (NIPS 2017). arXiv:1705.07874",
+  "SHAP method (decision 105)",
+  "opened (arXiv abstract); venue verified 7 Oct 2026 on the NeurIPS proceedings page (NIPS 2017, vol 30)"
+ ],
+ [
+  "R54",
+  "Lundberg SM, Erion G, Chen H, DeGrave A, Prutkin JM, Nair B, Katz R, Himmelfarb J, Bansal N, Lee SI. From local explanations to global understanding with explainable AI for trees. Nat Mach Intell 2020;2:56-67. doi:10.1038/s42256-019-0138-9",
+  "TreeExplainer, exact SHAP for tree models (decision 105)",
+  "opened (arXiv abstract); journal details verified 7 Oct 2026 via Europe PMC (PMC7326367)"
+ ],
+ [
+  "R55",
+  "Aas K, Jullum M, Løland A. Explaining individual predictions when features are dependent: more accurate approximations to Shapley values. Artif Intell 2021;298:103502. doi:10.1016/j.artint.2021.103502",
+  "SHAP assuming independence 'may give very wrong explanations' for dependent features (decision 105)",
+  "opened (arXiv abstract); journal details verified 7 Oct 2026 via Crossref"
+ ],
+ [
+  "R56",
+  "Austin PC, Steyerberg EW. The Integrated Calibration Index (ICI) and related metrics for quantifying the calibration of logistic regression models. Stat Med 2019;38:4051-4065. doi:10.1002/sim.8281",
+  "ICI, E50, E90; used to compare logistic regression with random forests and boosted trees (decisions 88, 110)",
+  "opened (abstract, Europe PMC)"
+ ],
+ [
+  "R57",
+  "van Buuren S, Groothuis-Oudshoorn K. mice: Multivariate Imputation by Chained Equations in R. J Stat Softw 2011;45(3):1-67. doi:10.18637/jss.v045.i03",
+  "Default imputation model per variable type: logistic (2-level), multinomial logit (unordered), ordered logit (ordered), predictive mean matching (numeric) (decision 113)",
+  "opened (full text, jstatsoft.org) 7 Oct 2026: Table 1 and section 3.2 'Default imputation method'"
+ ],
+ [
+  "R58",
+  "Probst P, Boulesteix AL, Bischl B. Tunability: importance of hyperparameters of machine learning algorithms. J Mach Learn Res 2019;20:1-32",
+  "Search ranges and tunability of XGBoost and random forest settings across 38 datasets (decisions 125 onward)",
+  "opened (full text, jmlr.org) 7 Oct 2026: Tables 1 and 3"
+ ],
+ [
+  "R59",
+  "Kadra A, Lindauer M, Hutter F, Grabocka J. Well-tuned simple nets excel on tabular datasets. Advances in Neural Information Processing Systems 34 (NeurIPS 2021). arXiv:2106.11189",
+  "Regularised multilayer perceptrons on 40 tabular datasets; weight decay range 1e-5 to 0.1 (AdamW scale), background for the M5 weight decay range (decision 128)",
+  "opened (full text, arxiv.org) 7 Oct 2026: Table 1"
+ ],
+ [
+  "R60",
+  "Watanabe S. Tree-structured Parzen estimator: understanding its algorithm components and their roles for better empirical performance. arXiv:2304.11127 (v5, 2026)",
+  "Ablation of TPE components on 51 problems; multivariate TPE recommended; basis for using Optuna's default TPE settings (decision 131)",
+  "opened (full text, arxiv.org) 7 Oct 2026: section 4.1"
+ ],
+ [
+  "R61",
+  "Heinze G, Wallisch C, Dunkler D. Variable selection - a review and recommendations for the practicing statistician. Biom J 2018;60(3):431-449. doi:10.1002/bimj.201700067",
+  "Predictors from background knowledge as the starting point; selection adds instability; Table 3: no selection on predictors with known strong effects; ridge on the global model where selection is not recommended (decision 22)",
+  "opened (full text, PMC5969114) 8 Oct 2026: section 3.1, Table 3. Note: written mainly for descriptive/explanatory models; Table 3 permits selection of predictors with unclear effects when events per variable exceed 25, with a stability investigation"
+ ],
+ [
+  "R62",
+  "Ambroise C, McLachlan GJ. Selection bias in gene extraction on the basis of microarray gene-expression data. Proc Natl Acad Sci USA 2002;99(10):6562-6566. doi:10.1073/pnas.102102699",
+  "Recursive feature elimination gives optimistic error estimates unless selection is repeated inside cross-validation ('external cross-validation') (decision 22)",
+  "opened (full text, PMC124442) 8 Oct 2026: abstract and introduction"
+ ],
+ [
+  "R63",
+  "Sauerbrei W, Perperoglou A, Schmid M, et al. State of the art in selection of variables and functional forms in multivariable analysis - outstanding issues. Diagn Progn Res 2020;4:3. doi:10.1186/s41512-020-00074-3",
+  "STRATOS review: 'not yet enough evidence on which to base recommendations for the selection of variables'; prediction models 'can then be more complex (more variables included ...)'; subject-matter knowledge should guide model building (decision 22)",
+  "opened (full text, PMC7114804) 8 Oct 2026: abstract and introduction. Note: also says data-dependent building is needed where subject-matter knowledge is fragile"
+ ],
+ [
+  "R64",
+  "XGBoost developers. XGBoost Python API reference, version 3.4.1: Booster.predict, parameter pred_contribs.",
+  "pred_contribs returns 'the feature contributions (SHAP values) for that prediction. The sum of all feature contributions is equal to the raw untransformed margin value of the prediction. Note the final column is the bias term.' (decision 143)",
+  "opened 8 Oct 2026: docstring of the installed xgboost 3.4.1 (the online documentation site was unreachable from the workspace)"
+ ],
+ [
+  "R65",
+  "Moons KGM, et al. PROBAST+AI: an updated quality, risk of bias, and applicability assessment tool for prediction models using regression or artificial intelligence methods. BMJ 2025;388:e082505. doi:10.1136/bmj-2024-082505",
+  "PROBAST+AI self-assessment (ST19; decision 153)",
+  "opened 8 Oct 2026: full text, Europe PMC PMC11931409"
+ ],
+ [
+  "R66",
+  "Hardt M, Price E, Srebro N. Equality of opportunity in supervised learning. Advances in Neural Information Processing Systems 2016. arXiv:1610.02413",
+  "Error rates between groups under one decision rule (decision 149)",
+  "opened 8 Oct 2026: arXiv abstract"
+ ],
+ [
+  "R67",
+  "van Buuren S. Flexible Imputation of Missing Data, 2nd ed. Boca Raton: Chapman & Hall/CRC, 2018. Online edition, section 3.2",
+  "Proper multiple imputation by bootstrap (decision 146)",
+  "opened 8 Oct 2026: online edition section 3.2 and Table 3.1; publisher details to verify"
+ ]
+]

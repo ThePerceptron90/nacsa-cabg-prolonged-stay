@@ -1,0 +1,30 @@
+# Package versions used. Each step's log.txt records the versions of its own run.
+#
+# Steps 1-3 ran in Google Colab:
+#   Python 3.13, pandas 2.2.3, numpy 2.1.3, pyarrow (Parquet files)
+# From Step 4 the steps run in Claude's workspace (decision 72):
+#   Python 3.13, pandas 3.0.5, numpy 2.5.3, matplotlib 3.11.2, scipy 1.18.1 (from Step 6), scikit-learn 1.9.1 (from Step 6b)
+#   (Step 4 was run in both environments with identical outputs.)
+# From Step 7 (6 Oct 2026) the steps run in a Claude Code cloud session (4 CPU cores, 15 GB RAM),
+# because the earlier workspace could not install the modelling libraries:
+#   Python 3.13.16, pandas 3.0.5, numpy 2.5.3, scipy 1.18.1, scikit-learn 1.9.1, matplotlib 3.11.2,
+#   pyarrow 25.0.1, lightgbm 4.7.0, xgboost 3.4.1, catboost 1.2.10, optuna 5.0.0
+#   (Step 6b rerun there reproduced all seven output tables byte for byte.)
+# Step 8 adds statsmodels 0.15.0.
+# Step 15 adds no package: SHAP values come from xgboost's own pred_contribs (exact TreeSHAP).
+# Step 16 adds no package (MICE draws use numpy, scikit-learn and statsmodels already pinned).
+# Step 17 adds no package.
+pandas>=2.2.3
+numpy>=2.1.3
+matplotlib
+scipy>=1.18   # Step 6 sample-size calculation (root finding, normal quantiles)
+scikit-learn>=1.9   # Step 6b illustrative check; imputation and models from Step 8
+pyarrow   # only needed to read the Parquet version of the clean data
+xgboost==3.4.1        # M3 (decision 102), from Step 8
+optuna==5.0.0         # hyperparameter tuning (decision 95)
+statsmodels==0.15.0   # lowess calibration curve for ICI/E50/E90 (decision 116), from Step 8
+# LightGBM and CatBoost removed 7 Oct 2026 (dropped from the line-up, decision 102).
+# Step 18 adds python-docx and Pillow (Word supplement and figure copies); PDF conversion uses
+# LibreOffice 24.2 (soffice, a system program, not a pip package).
+python-docx==1.2.0
+Pillow==12.3.0
