@@ -7,7 +7,7 @@
 
 Analysis code for the paper:
 
-> Soleimani H, Dastjerdi P, Ebrahimi P, Comanici M, Rajakaruna C, Mohamed Ahmed E, Angelini G, Fudulu D.
+> Soleimani H, Montazerinamin S, Dastjerdi P, Ebrahimi P, Comanici M, Rajakaruna C, Mohamed Ahmed E, Angelini G, Fudulu D.
 > **Prolonged length of stay after coronary artery bypass grafting: staged, interpretable prediction model
 > development and temporal evaluation in a national registry.** Submitted to *European Heart Journal - Digital Health*.
 
