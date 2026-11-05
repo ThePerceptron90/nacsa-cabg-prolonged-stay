@@ -4,6 +4,7 @@
 ![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)
 ![Reporting: TRIPOD+AI](https://img.shields.io/badge/reporting-TRIPOD%2BAI-green.svg)
 ![Paper: under review](https://img.shields.io/badge/paper-under%20review-orange.svg)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23986055.svg)](https://doi.org/10.5281/zenodo.23986055)
 
 Analysis code for the paper:
 
@@ -11,7 +12,7 @@ Analysis code for the paper:
 > **Prolonged length of stay after coronary artery bypass grafting: staged, interpretable prediction model
 > development and temporal evaluation in a national registry.** Submitted to *European Heart Journal - Digital Health*.
 
-Archived version (Zenodo): DOI to be added at release. See [`CITATION.cff`](CITATION.cff) for how to cite.
+Archived version (Zenodo): [doi:10.5281/zenodo.23986055](https://doi.org/10.5281/zenodo.23986055). See [`CITATION.cff`](CITATION.cff) for how to cite.
 
 **This repository contains code only. It contains no patient data and no patient-level results.**
 
